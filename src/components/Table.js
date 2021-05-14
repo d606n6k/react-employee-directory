@@ -20,11 +20,12 @@ function TableLayout({ employees }) {
     return (
       <tr>
         <th scope="col">
-          {employees.name.first} {employees.name.last}
+          <img src={employees.picture.thumbnail} /> {employees.name.first}{" "}
+          {employees.name.last}
         </th>
-        <th scope="col">Email</th>
-        <th scope="col">Phone</th>
-        <th scope="col">Birthday</th>
+        <th scope="col">{employees.email}</th>
+        <th scope="col">{employees.phone}</th>
+        <th scope="col">{employees.dob.age}</th>
       </tr>
     );
   });
@@ -35,7 +36,7 @@ function TableLayout({ employees }) {
           <th scope="col">Name</th>
           <th scope="col">Email</th>
           <th scope="col">Phone</th>
-          <th scope="col">Birthday</th>
+          <th scope="col">Age</th>
         </tr>
       </thead>
       <tbody>{employeeResults}</tbody>
