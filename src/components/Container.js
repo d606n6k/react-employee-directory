@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import SearchForm from "./SearchForm";
 import ResultList from "./ResultList";
 import API from "../utils/API";
+import NavBar from "./Nav";
+import Buttons from "./Buttons";
+import TableLayout from "./Table";
 
-class SearchResultContainer extends Component {
+class Container extends Component {
   state = {
     search: "",
     results: [],
@@ -23,9 +26,11 @@ class SearchResultContainer extends Component {
   };
 
   employeeGrab = () => {
-    API.fetchEmployees().then((res) =>
-      this.setState({ employees: res.data.results })
-    );
+    API.fetchEmployees()
+      .then((res) => console.log(res))
+      .then((res) => this.setState({ employees: res.data.results }))
+      .catch((err) => console.log(err));
+    //
   };
 
   handleInputChange = (event) => {
@@ -47,21 +52,24 @@ class SearchResultContainer extends Component {
       <div>
         {/* 
         I want to render the following:
-        - hero/header
-        - a table that can be sorted by either a button or a column heading selection
-        - a table with 10 employees from the API
+        - hero/header - Create a component file and link above 
+        - a table that can be sorted by either a button or a column heading selection - Create a component file and link above
+        - a table with 10 employees from the API - Create a component file and link above
           - employees have at least 3-4 datapoints
         
         */}
-        <SearchForm
+        <NavBar />
+        <Buttons />
+        <TableLayout />
+        {/* <SearchForm
           search={this.state.search}
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
-        />
-        <ResultList results={this.state.results} />
+        /> */}
+        {/* <ResultList results={this.state.results} /> */}
       </div>
     );
   }
 }
 
-export default SearchResultContainer;
+export default Container;
