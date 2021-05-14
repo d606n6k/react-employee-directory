@@ -6,29 +6,33 @@ function TableLayout() {
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Birthday</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td>Marky Mark</td>
+          <td>Marky@gmail.com</td>
+          <td>1(619)123-1234</td>
+          <td>02/1/1980</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Willy Wonka</td>
+          <td>Wonks@wonkafactory.com</td>
+          <td>1(619)123-1234</td>
+          <td>5/12/1942</td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
+          <td>Frodo Baggins</td>
+          <td>potaters@lotr.com</td>
+          <td>1(619)123-1234</td>
+          <td>9/22/4094 BC</td>
         </tr>
       </tbody>
     </table>

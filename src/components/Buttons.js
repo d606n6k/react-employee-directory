@@ -9,7 +9,7 @@ function Buttons() {
           <p class="lead">
             Please use the buttons below to filter employees by{" "}
             <strong>Name</strong>, <strong>Email</strong>,<strong>Phone</strong>
-            , and<strong>Birthday</strong>
+            , and <strong>Birthday</strong>
           </p>
           <button type="button" class="btn btn-secondary btn-lg ml-2">
             Name
