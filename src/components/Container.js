@@ -15,19 +15,18 @@ class Container extends Component {
 
   // When this component mounts, search the Giphy API for pictures of kittens
   componentDidMount() {
-    this.searchGiphy("kittens");
+    // this.searchGiphy("kittens");
     this.employeeGrab();
   }
 
-  searchGiphy = (query) => {
-    API.search(query)
-      .then((res) => this.setState({ results: res.data.data }))
-      .catch((err) => console.log(err));
-  };
+  // searchGiphy = (query) => {
+  //   API.search(query)
+  //     .then((res) => this.setState({ results: res.data.data }))
+  //     .catch((err) => console.log(err));
+  // };
 
   employeeGrab = () => {
     API.fetchEmployees()
-      .then((res) => console.log(res))
       .then((res) => this.setState({ employees: res.data.results }))
       .catch((err) => console.log(err));
     //
@@ -60,7 +59,7 @@ class Container extends Component {
         */}
         <NavBar />
         <Buttons />
-        <TableLayout />
+        <TableLayout employees={this.state.employees} />
         {/* <SearchForm
           search={this.state.search}
           handleFormSubmit={this.handleFormSubmit}
