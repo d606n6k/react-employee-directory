@@ -1,7 +1,8 @@
-import logo from "./logo.svg";
+import React from "react";
+import SearchResultContainer from "./components/SearchResultContainer";
 
 function App() {
-  return <div>App</div>;
+  return <SearchResultContainer />;
 }
 
 export default App;
