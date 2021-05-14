@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,KACE,oBACF,CAEA,iBACE,qBAAiC,CACjC,UACF","file":"main.72f60ce7.chunk.css","sourcesContent":["body {\r\n  background-color: red;\r\n}\r\n\r\n#employee-header {\r\n  background-color: rgb(17, 17, 17);\r\n  color: white;\r\n}\r\n"]}
