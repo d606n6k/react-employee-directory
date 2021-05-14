@@ -7,6 +7,6 @@ import axios from "axios";
 // the passed query
 export default {
   fetchEmployees: function () {
-    return axios.get("https://randomuser.me/api/?results=10");
+    return axios.get("https://randomuser.me/api/?results=20");
   },
 };
