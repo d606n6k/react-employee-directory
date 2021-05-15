@@ -8,9 +8,8 @@ function Buttons(props) {
         <div className="container">
           <h1 className="display-4">Welcome to your Employee Dashboard</h1>
           <p className="lead">
-            Please use the buttons below to filter employees by
-            <strong> Name</strong>, <strong>Email</strong>,{" "}
-            <strong>Phone</strong>, and <strong>Birthday</strong>
+            Please use the buttons below to filter employees by{" "}
+            <strong>Age</strong>
           </p>
           {/* <button
             type="button"
