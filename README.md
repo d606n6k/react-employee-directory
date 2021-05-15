@@ -34,7 +34,7 @@ Live URL: https://d606n6k.github.io/react-employee-directory/
 
 ## Usage
 
-- Navigate to https://dashboard.heroku.com/apps/the-workout-tracking-appage and track your workouts!
+- Navigate to https://d606n6k.github.io/react-employee-directory/ to view your employee dashboard!
 
 ## License
 
