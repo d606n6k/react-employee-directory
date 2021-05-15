@@ -12,6 +12,7 @@
 <p align="center">
     <img src="https://img.shields.io/badge/Javascript-yellow" />
     <img src="https://img.shields.io/badge/React-React-blue" />
+    <img src="https://img.shields.io/badge/Heroku-Heroku-lightgrey" />
     <img src="https://img.shields.io/badge/license-MIT-blue" />
 </p>
 
@@ -21,7 +22,7 @@
 
 ## Description
 
-This simple application will allow users to filter Employees by Name, Email, Phone, and Birthday. Also, when the user begins typing into the input field, the table will filter based on whats in the input box.
+This simple application will allow users to filter Employees by an Age button. Also, when the user begins typing into the input field, the table will filter based on whats in the input box. Plans for future iteration will include buttons to filter by Name, Email and Phone in addition to the Age filter button.
 
 Live URL: https://d606n6k.github.io/react-employee-directory/
 
