@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
+// import TableLayout from "Table";
 
-function Buttons() {
+function Buttons(props) {
   return (
     <div>
       <div className="jumbotron jumbotron-fluid">
@@ -11,16 +12,32 @@ function Buttons() {
             <strong> Name</strong>, <strong>Email</strong>,{" "}
             <strong>Phone</strong>, and <strong>Birthday</strong>
           </p>
-          <button type="button" className="btn btn-secondary btn-lg ml-2">
+          <button
+            type="button"
+            onClick={props.tableSort}
+            className="btn btn-secondary btn-lg ml-2"
+          >
             Name
           </button>
-          <button type="button" className="btn btn-secondary btn-lg ml-2">
+          <button
+            type="button"
+            onClick={props.tableSort}
+            className="btn btn-secondary btn-lg ml-2"
+          >
             Email
           </button>
-          <button type="button" className="btn btn-secondary btn-lg ml-2">
+          <button
+            type="button"
+            onClick={props.tableSort}
+            className="btn btn-secondary btn-lg ml-2"
+          >
             Phone
           </button>
-          <button type="button" className="btn btn-secondary btn-lg ml-2">
+          <button
+            type="button"
+            onClick={props.tableSort}
+            className="btn btn-secondary btn-lg ml-2"
+          >
             Birthday
           </button>
         </div>

@@ -1,35 +1,47 @@
 import React, { Component } from "react";
-import SearchForm from "./SearchForm";
-import ResultList from "./ResultList";
 import API from "../utils/API";
 import NavBar from "./Nav";
 import Buttons from "./Buttons";
 import TableLayout from "./Table";
+import FilterBar from "./FilterBar";
 
 class Container extends Component {
   state = {
     search: "",
     results: [],
     employees: [],
+    name: "",
+    email: 1,
+    phone: 1,
+    age: 1,
   };
 
-  // When this component mounts, search the Giphy API for pictures of kittens
+  // When this component mounts, search the Employee API for pictures of randomized Employees
   componentDidMount() {
-    // this.searchGiphy("kittens");
     this.employeeGrab();
   }
-
-  // searchGiphy = (query) => {
-  //   API.search(query)
-  //     .then((res) => this.setState({ results: res.data.data }))
-  //     .catch((err) => console.log(err));
-  // };
 
   employeeGrab = () => {
     API.fetchEmployees()
       .then((res) => this.setState({ employees: res.data.results }))
       .catch((err) => console.log(err));
-    //
+  };
+
+  tableSort = (event) => {
+    const grabColumn = event.target.getAttribute("data-handle");
+    let columnSort = this.state.employees.map((e) => e);
+    columnSort.sort((a, b) => {
+      if (a[grabColumn] > b[grabColumn]) {
+        return 1 * this.state[grabColumn];
+      } else if (a[grabColumn] < b[grabColumn]) {
+        return -1 * this.state[grabColumn];
+      }
+      return 0;
+    });
+    this.setState({
+      employees: columnSort,
+      [grabColumn]: this.state[grabColumn] * -1,
+    });
   };
 
   handleInputChange = (event) => {
@@ -40,32 +52,16 @@ class Container extends Component {
     });
   };
 
-  // When the form is submitted, search the Giphy API for `this.state.search`
-  handleFormSubmit = (event) => {
-    event.preventDefault();
-    this.searchGiphy(this.state.search);
-  };
-
   render() {
     return (
       <div>
-        {/* 
-        I want to render the following:
-        - hero/header - Create a component file and link above 
-        - a table that can be sorted by either a button or a column heading selection - Create a component file and link above
-        - a table with 10 employees from the API - Create a component file and link above
-          - employees have at least 3-4 datapoints
-        
-        */}
         <NavBar />
-        <Buttons />
-        <TableLayout employees={this.state.employees} />
-        {/* <SearchForm
-          search={this.state.search}
-          handleFormSubmit={this.handleFormSubmit}
-          handleInputChange={this.handleInputChange}
-        /> */}
-        {/* <ResultList results={this.state.results} /> */}
+        <Buttons tableSort={this.tableSort} />
+        <FilterBar search={this.state.search} />
+        <TableLayout
+          employees={this.state.employees}
+          tableSort={this.tableSort}
+        />
       </div>
     );
   }
