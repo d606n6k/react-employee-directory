@@ -6,7 +6,6 @@ function NavBar() {
       <div id="employee-header" className="card-header">
         <h2>Employee Directory</h2>
       </div>
-      {/* <div className="card-body"></div> */}
     </div>
   );
 }

@@ -1,36 +1,20 @@
 import React, { Component } from "react";
 
 function TableLayout(props) {
-  // const employees = props.employees;
-  // console.log(employees);
-  // const employeeResults = employees.map((employees) => {
-  //   return (
-  //     <tr>
-  //       <th scope="col">
-  //         <img src={employees.picture.thumbnail} /> {employees.name.first}{" "}
-  //         {employees.name.last}
-  //       </th>
-  //       <th scope="col">{employees.email}</th>
-  //       <th scope="col">{employees.phone}</th>
-  //       <th scope="col">{employees.dob.age}</th>
-  //     </tr>
-  //   );
-  // });
-
   return (
     <table className="table">
       <thead>
         <tr>
-          <th data-handle="name" scope="col">
+          <th className="custom-thead" data-handle="name" scope="col">
             Name
           </th>
-          <th data-handle="email" scope="col">
+          <th className="custom-thead" data-handle="email" scope="col">
             Email
           </th>
-          <th data-handle="phone" scope="col">
+          <th className="custom-thead" data-handle="phone" scope="col">
             Phone
           </th>
-          <th data-handle="age" scope="col">
+          <th className="custom-thead" data-handle="age" scope="col">
             Age
           </th>
         </tr>

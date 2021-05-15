@@ -6,3 +6,7 @@ body {
   background-color: rgb(17, 17, 17);
   color: white;
 }
+
+.custom-thead {
+  border-top: 1px solid #d1f1ff !important;
+}

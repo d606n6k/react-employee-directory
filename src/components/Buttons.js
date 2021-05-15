@@ -8,7 +8,7 @@ function Buttons(props) {
         <div className="container">
           <h1 className="display-4">Welcome to your Employee Dashboard</h1>
           <p className="lead">
-            Please use the buttons below to filter employees by{" "}
+            Please use the button below to filter employees by{" "}
             <strong>Age</strong>
           </p>
           {/* <button
@@ -41,12 +41,8 @@ function Buttons(props) {
           </button>
         </div>
       </div>
-
-      {/* <button type="button" class="btn btn-secondary btn-lg">Name</button> */}
     </div>
   );
 }
 
 export default Buttons;
-
-// <button type="button" class="btn btn-secondary btn-lg">Large button</button>
