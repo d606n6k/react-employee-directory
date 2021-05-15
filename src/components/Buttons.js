@@ -12,7 +12,7 @@ function Buttons(props) {
             <strong> Name</strong>, <strong>Email</strong>,{" "}
             <strong>Phone</strong>, and <strong>Birthday</strong>
           </p>
-          <button
+          {/* <button
             type="button"
             onClick={props.tableSort}
             className="btn btn-secondary btn-lg ml-2"
@@ -32,13 +32,13 @@ function Buttons(props) {
             className="btn btn-secondary btn-lg ml-2"
           >
             Phone
-          </button>
+          </button> */}
           <button
             type="button"
-            onClick={props.tableSort}
+            onClick={props.handleFormSubmit}
             className="btn btn-secondary btn-lg ml-2"
           >
-            Birthday
+            Age
           </button>
         </div>
       </div>

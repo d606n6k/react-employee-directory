@@ -9,8 +9,11 @@ function FilterBar(props) {
         </span>
       </div>
       <input
+        onChange={props.handleInputChange}
+        value={props.search}
         type="text"
-        class="form-control"
+        name="search"
+        className="form-control"
         placeholder="Employee Name"
         aria-label="Emlpoyee Name"
         aria-describedby="basic-addon1"

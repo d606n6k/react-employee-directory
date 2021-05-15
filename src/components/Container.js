@@ -10,10 +10,6 @@ class Container extends Component {
     search: "",
     results: [],
     employees: [],
-    name: "",
-    email: 1,
-    phone: 1,
-    age: 1,
   };
 
   // When this component mounts, search the Employee API for pictures of randomized Employees
@@ -52,15 +48,31 @@ class Container extends Component {
     });
   };
 
+  handleFormSubmit = (event) => {
+    const employeeAge = [...this.state.employees];
+    console.log("Test");
+    employeeAge.sort((a, b) => a.dob.age - b.dob.age);
+    this.setState({ employees: employeeAge });
+  };
+
   render() {
     return (
       <div>
         <NavBar />
-        <Buttons tableSort={this.tableSort} />
-        <FilterBar search={this.state.search} />
+        <Buttons
+          // tableSort={this.tableSort}
+          handleFormSubmit={this.handleFormSubmit}
+        />
+        <FilterBar
+          search={this.state.search}
+          handleFormSubmit={this.handleFormSubmit}
+          handleInputChange={this.handleInputChange}
+        />
         <TableLayout
+          search={this.state.search}
           employees={this.state.employees}
-          tableSort={this.tableSort}
+          handleFormSubmit={this.handleFormSubmit}
+          // tableSort={this.tableSort}
         />
       </div>
     );

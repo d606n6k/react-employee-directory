@@ -1,24 +1,22 @@
 import React, { Component } from "react";
-// import employees from "../employees.json";
 
 function TableLayout(props) {
-  const employees = props.employees;
-  console.log(employees);
-  const employeeResults = employees.map((employees) => {
-    return (
-      <tr>
-        <th scope="col">
-          <img src={employees.picture.thumbnail} /> {employees.name.first}{" "}
-          {employees.name.last}
-        </th>
-        <th scope="col">{employees.email}</th>
-        <th scope="col">{employees.phone}</th>
-        <th scope="col">{employees.dob.age}</th>
-      </tr>
-    );
-  });
+  // const employees = props.employees;
+  // console.log(employees);
+  // const employeeResults = employees.map((employees) => {
+  //   return (
+  //     <tr>
+  //       <th scope="col">
+  //         <img src={employees.picture.thumbnail} /> {employees.name.first}{" "}
+  //         {employees.name.last}
+  //       </th>
+  //       <th scope="col">{employees.email}</th>
+  //       <th scope="col">{employees.phone}</th>
+  //       <th scope="col">{employees.dob.age}</th>
+  //     </tr>
+  //   );
+  // });
 
-  // onClick={props.tableSort}
   return (
     <table className="table">
       <thead>
@@ -37,7 +35,27 @@ function TableLayout(props) {
           </th>
         </tr>
       </thead>
-      <tbody>{employeeResults}</tbody>
+      {/* <tbody>{employeeResults}</tbody> */}
+      <tbody>
+        {props.employees
+          ?.filter((employee) =>
+            `${employee.name.first} ${employee.name.last}`
+              .toUpperCase()
+              .includes(props.search.toUpperCase())
+          )
+          .map((employee, i) => (
+            <tr>
+              <th scope="row">
+                <img src={employee.picture.medium} alt={"employee" + i}></img>
+              </th>
+              <td>{`${employee.name.first} ${employee.name.last}`}</td>
+              <td>{employee.cell}</td>
+              <td>{employee.email}</td>
+              <td>{new Date(employee.dob.date).toLocaleDateString()}</td>
+              <td>{employee.dob.age}</td>
+            </tr>
+          ))}
+      </tbody>
     </table>
   );
 }
