@@ -11,8 +11,8 @@
   
 <p align="center">
     <img src="https://img.shields.io/badge/Javascript-yellow" />
-    <img src="https://img.shields.io/badge/React-React-blue" />
-    <img src="https://img.shields.io/badge/Heroku-Heroku-lightgrey" />
+    <img src="https://img.shields.io/badge/React-blue" />
+    <img src="https://img.shields.io/badge/Heroku-lightgrey" />
     <img src="https://img.shields.io/badge/license-MIT-blue" />
 </p>
 
