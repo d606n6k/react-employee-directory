@@ -6,6 +6,9 @@ function TableLayout(props) {
       <thead>
         <tr>
           <th className="custom-thead" data-handle="name" scope="col">
+            Photo
+          </th>
+          <th className="custom-thead" data-handle="name" scope="col">
             Name
           </th>
           <th className="custom-thead" data-handle="email" scope="col">
@@ -13,6 +16,9 @@ function TableLayout(props) {
           </th>
           <th className="custom-thead" data-handle="phone" scope="col">
             Phone
+          </th>
+          <th className="custom-thead" data-handle="phone" scope="col">
+            Date of Birth
           </th>
           <th className="custom-thead" data-handle="age" scope="col">
             Age
